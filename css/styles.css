@@ -31,6 +31,36 @@ body {
   scroll-behavior: smooth;
 }
 
+.text-terracotta {
+  color: #E59B72 !important;
+}
+
+.text-cocoa,
+.text-stone-600,
+.text-stone-500,
+.text-stone-400,
+.text-stone-300,
+.text-stone-200,
+.text-stone-700 {
+  color: #E7DED3 !important;
+}
+
+.text-stone-500 {
+  color: #CDBFBB !important;
+}
+
+.text-stone-600 {
+  color: #E7DED3 !important;
+}
+
+.text-stone-400 {
+  color: #B5AAA1 !important;
+}
+
+.text-stone-300 {
+  color: #9F9088 !important;
+}
+
 .font-serif {
   font-family: var(--font-serif);
 }
@@ -120,6 +150,47 @@ button,
 .text-terracotta {
   box-shadow: 0 10px 25px rgba(215, 122, 74, 0.12);
 }
+
+.bg-terracotta {
+  background-color: #C96F47 !important;
+}
+
+.bg-terracotta-light {
+  background-color: rgba(201, 111, 71, 0.14) !important;
+}
+
+.bg-amber-50,
+.bg-purple-50,
+.bg-emerald-50 {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.text-amber-700 {
+  color: #E9C17E !important;
+}
+
+.text-purple-700 {
+  color: #D3B8FF !important;
+}
+
+.text-emerald-700 {
+  color: #9EE1C4 !important;
+}
+
+.bg-stone-100,
+.bg-stone-200,
+.bg-stone-50 {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+.text-cocoa {
+  color: #F8F2EB !important;
+}
+
+.text-white {
+  color: #FFFFFF !important;
+}
+
 
 /* Custom Filter Buttons */
 .tab-btn {
