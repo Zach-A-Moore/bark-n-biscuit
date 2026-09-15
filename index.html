@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bark 'n' Biscuit | Dog Bakery & Grooming Salon</title>
+  <meta name="description" content="Bark 'n' Biscuit is a locally owned dog bakery and grooming salon. All-natural kitchen-crafted treats and stress-free grooming care supporting 8+ local businesses." />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            terracotta: '#E86A42',
+            'terracotta-dark': '#D3552C',
+            'terracotta-light': '#FDF4F0',
+            'terracotta-border': '#F5DCD3',
+            cocoa: '#2A221E',
+            'cocoa-subtle': '#574B46',
+            cream: '#FAF6F0',
+            'card-bg': '#FFFDF9',
+            honey: '#E5A83B',
+            sage: '#5E8C6A',
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-cream text-cocoa antialiased selection:bg-terracotta selection:text-white">
+
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-50 bg-[#FAF7F2] border-b border-stone-200 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo & Name -->
+      <a href="#" class="flex items-center gap-3 group">
+        <img src="assets/logo.png" alt="Bark 'n' Biscuit Logo" class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+        <div>
+          <span class="block font-serif-heading font-bold text-xl sm:text-2xl text-cocoa leading-tight">Bark 'n' Biscuit</span>
+          <span class="block text-xs font-semibold tracking-wider text-terracotta uppercase">Grooming & Bakery</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-cocoa-subtle">
+        <a href="#about" class="hover:text-terracotta transition-colors py-1">Our Story</a>
+        <a href="#bakery" class="hover:text-terracotta transition-colors py-1">Bakery Treats</a>
+        <a href="#grooming" class="hover:text-terracotta transition-colors py-1">Grooming & Pricing</a>
+        <a href="#transformations" class="hover:text-terracotta transition-colors py-1">Transformations</a>
+        <a href="#locations" class="hover:text-terracotta transition-colors py-1">Locations & Hours</a>
+        <a href="#faq" class="hover:text-terracotta transition-colors py-1">FAQ</a>
+      </nav>
+
+      <!-- Desktop Action CTA -->
+      <div class="hidden sm:flex items-center gap-4">
+        <a href="#grooming" class="inline-flex items-center gap-2 bg-terracotta text-white hover:bg-terracotta-dark px-5 py-2.5 rounded-full font-medium text-sm transition-all shadow-sm hover:shadow-md">
+          <i class="fa-solid fa-scissors"></i>
+          <span>Grooming Rates</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" aria-label="Open navigation menu" class="lg:hidden p-2 text-cocoa hover:text-terracotta focus:outline-none">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
+    <div class="absolute inset-0 bg-cocoa/40 backdrop-blur-sm" id="close-menu-backdrop"></div>
+    <div class="relative ml-auto w-full max-w-xs h-full bg-cream shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-stone-200">
+          <div class="flex items-center gap-2">
+            <img src="assets/logo.png" alt="Logo" class="h-10 w-auto" />
+            <span class="font-serif-heading font-bold text-lg text-cocoa">Bark 'n' Biscuit</span>
+          </div>
+          <button id="close-menu-btn" class="p-2 text-stone-500 hover:text-cocoa">
+            <i class="fa-solid fa-xmark text-xl"></i>
+          </button>
+        </div>
+
+        <nav class="mt-8 flex flex-col gap-5 text-base font-medium text-cocoa">
+          <a href="#about" class="mobile-nav-link hover:text-terracotta transition-colors">Our Story</a>
+          <a href="#bakery" class="mobile-nav-link hover:text-terracotta transition-colors">Bakery Treats</a>
+          <a href="#grooming" class="mobile-nav-link hover:text-terracotta transition-colors">Grooming & Pricing</a>
+          <a href="#transformations" class="mobile-nav-link hover:text-terracotta transition-colors">Transformations</a>
+          <a href="#locations" class="mobile-nav-link hover:text-terracotta transition-colors">Locations & Hours</a>
+          <a href="#faq" class="mobile-nav-link hover:text-terracotta transition-colors">FAQ</a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-stone-200 flex flex-col gap-3">
+        <a href="#grooming" class="mobile-nav-link w-full text-center bg-terracotta text-white py-3 rounded-xl font-medium shadow-sm">
+          View Grooming Prices
+        </a>
+        <a href="#locations" class="mobile-nav-link w-full text-center bg-stone-200 text-cocoa py-3 rounded-xl font-medium">
+          Find Retail & Salon
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+    <!-- Ambient Background Accents -->
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-terracotta-light rounded-full blur-3xl opacity-60 pointer-events-none glow-bg"></div>
+    <div class="absolute top-40 right-10 w-72 h-72 bg-amber-100 rounded-full blur-2xl opacity-40 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Content -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 bg-terracotta-light border border-terracotta-border text-terracotta px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider">
+            <i class="fa-solid fa-heart text-terracotta"></i>
+            <span>Locally Owned • Kitchen Crafted • 8+ Local Suppliers</span>
+          </div>
+
+          <h1 class="font-serif-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-cocoa leading-[1.15]">
+            All-Natural Bakery Treats & Gentle Spa Grooming
+          </h1>
+
+          <p class="text-stone-600 text-lg sm:text-xl max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            Welcome to <strong class="text-cocoa font-semibold">Bark 'n' Biscuit</strong>! Every recipe in our bakery is kitchen-crafted with 100% natural grocery ingredients, and our grooming salon treats every pup to a stress-free spa experience.
+          </p>
+
+          <!-- Quick Action Buttons -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#bakery" class="bg-terracotta hover:bg-terracotta-dark text-white px-7 py-3.5 rounded-full font-semibold text-base transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 inline-flex items-center gap-2">
+              <i class="fa-solid fa-cookie-bite"></i>
+              <span>Explore Bakery Treats</span>
+            </a>
+
+            <a href="#grooming" class="bg-white hover:bg-stone-50 text-cocoa border border-stone-300 px-7 py-3.5 rounded-full font-semibold text-base transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 inline-flex items-center gap-2">
+              <i class="fa-solid fa-calculator text-terracotta"></i>
+              <span>Calculate Grooming Price</span>
+            </a>
+          </div>
+
+          <!-- Quick Location Pill Cards -->
+          <div class="pt-6 grid sm:grid-cols-2 gap-4 max-w-xl mx-auto lg:mx-0">
+            <a href="#locations" class="p-3.5 rounded-2xl bg-white/80 backdrop-blur border border-stone-200/80 flex items-center gap-3.5 hover:border-terracotta/40 transition-colors shadow-sm text-left group">
+              <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                <i class="fa-solid fa-store text-lg"></i>
+              </div>
+              <div>
+                <span class="block text-xs font-semibold text-stone-400 uppercase tracking-wide">Retail Store</span>
+                <span class="block font-bold text-sm text-cocoa group-hover:text-terracotta transition-colors">Inside Brewhalla</span>
+                <span class="block text-xs text-stone-500">1702 1st Ave N</span>
+              </div>
+            </a>
+
+            <a href="#locations" class="p-3.5 rounded-2xl bg-white/80 backdrop-blur border border-stone-200/80 flex items-center gap-3.5 hover:border-terracotta/40 transition-colors shadow-sm text-left group">
+              <div class="w-10 h-10 rounded-xl bg-terracotta-light text-terracotta flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                <i class="fa-solid fa-scissors text-lg"></i>
+              </div>
+              <div>
+                <span class="block text-xs font-semibold text-stone-400 uppercase tracking-wide">Grooming Salon</span>
+                <span class="block font-bold text-sm text-cocoa group-hover:text-terracotta transition-colors">56th Street Salon</span>
+                <span class="block text-xs text-stone-500">3895 56th Street</span>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Visual Showcase -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Main Hero Image Frame -->
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+              <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1000&q=80" alt="Happy freshly groomed dogs enjoying baked treats" class="w-full h-[460px] object-cover" />
+              
+              <div class="absolute inset-0 bg-gradient-to-t from-cocoa/70 via-transparent to-transparent"></div>
+              
+              <div class="absolute bottom-6 left-6 right-6 text-white space-y-1">
+                <div class="flex items-center gap-2 text-xs font-medium text-amber-200 uppercase tracking-wider">
+                  <i class="fa-solid fa-star"></i>
+                  <span>Fargo-Moorhead's Favorite Dog Spot</span>
+                </div>
+                <h3 class="font-serif-heading font-bold text-xl">Love in Every Batch & Bath</h3>
+                <p class="text-xs text-stone-200">Fresh homemade treats + gentle, stress-free grooming care.</p>
+              </div>
+            </div>
+
+            <!-- Floating Badge Card 1 -->
+            <div class="absolute -top-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-stone-100 flex items-center gap-3 animate-float hidden sm:flex">
+              <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+                <i class="fa-solid fa-leaf text-xl"></i>
+              </div>
+              <div>
+                <span class="block text-xs text-stone-400 font-semibold uppercase">100% Natural</span>
+                <span class="block font-serif-heading font-bold text-cocoa text-sm">Grocery Ingredients</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge Card 2 -->
+            <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl p-4 shadow-xl border border-stone-100 flex items-center gap-3 hidden sm:flex">
+              <div class="w-12 h-12 rounded-xl bg-terracotta-light text-terracotta flex items-center justify-center">
+                <i class="fa-solid fa-hand-holding-heart text-xl"></i>
+              </div>
+              <div>
+                <span class="block text-xs text-stone-400 font-semibold uppercase">Supporting Local</span>
+                <span class="block font-serif-heading font-bold text-cocoa text-sm">8+ Small Businesses</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Value Props Banner -->
+  <section class="py-10 bg-white border-y border-stone-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        
+        <div class="space-y-2 p-3">
+          <div class="w-12 h-12 mx-auto rounded-full bg-amber-50 text-amber-700 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-bowl-food"></i>
+          </div>
+          <h4 class="font-serif-heading font-bold text-cocoa text-base">Kitchen Fresh</h4>
+          <p class="text-xs text-stone-500">Recipes created directly in our own home kitchen</p>
+        </div>
+
+        <div class="space-y-2 p-3">
+          <div class="w-12 h-12 mx-auto rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <h4 class="font-serif-heading font-bold text-cocoa text-base">All-Natural Sourcing</h4>
+          <p class="text-xs text-stone-500">Only real ingredients you'd find at the grocery store</p>
+        </div>
+
+        <div class="space-y-2 p-3">
+          <div class="w-12 h-12 mx-auto rounded-full bg-terracotta-light text-terracotta flex items-center justify-center text-xl">
+            <i class="fa-solid fa-handshake-angle"></i>
+          </div>
+          <h4 class="font-serif-heading font-bold text-cocoa text-base">8+ Local Partners</h4>
+          <p class="text-xs text-stone-500">Every purchase directly supports local small businesses</p>
+        </div>
+
+        <div class="space-y-2 p-3">
+          <div class="w-12 h-12 mx-auto rounded-full bg-purple-50 text-purple-700 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-shower"></i>
+          </div>
+          <h4 class="font-serif-heading font-bold text-cocoa text-base">Gentle Grooming</h4>
+          <p class="text-xs text-stone-500">Stress-free spa baths, haircuts, & custom coat care</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="py-20 md:py-28 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Story Image Stack -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=800&q=80" alt="Dog enjoying kitchen treat" class="rounded-3xl shadow-xl w-full h-[420px] object-cover" />
+            
+            <div class="absolute -bottom-8 -right-4 sm:right-6 bg-cream border-2 border-stone-200 p-5 rounded-2xl shadow-xl max-w-xs space-y-2">
+              <div class="flex items-center gap-1.5 text-amber-500 text-sm">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-xs text-cocoa font-medium italic">"My dog goes crazy for their peanut butter bites! Plus I love knowing everything is all-natural and locally made."</p>
+              <span class="block text-[11px] text-stone-400 font-bold uppercase">— Local Fargo Pet Parent</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story Content -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="badge-pill">
+            <i class="fa-solid fa-heart"></i>
+            <span>Our Kitchen & Grooming Philosophy</span>
+          </div>
+
+          <h2 class="font-serif-heading text-3xl sm:text-4xl font-bold text-cocoa leading-tight">
+            Crafted in Our Kitchen, Loved in Every Bowl & Bath
+          </h2>
+
+          <p class="text-stone-600 text-base sm:text-lg leading-relaxed">
+            At <strong class="text-cocoa font-semibold">Bark 'n' Biscuit</strong>, we believe dogs are family members who deserve wholesome food and gentle, loving grooming care. All the bakery recipes we bake were created right in our own home kitchen using 100% natural ingredients—the exact same clean, wholesome items you would find at your local grocery store.
+          </p>
+
+          <p class="text-stone-600 text-base leading-relaxed">
+            We are deeply committed to our local community. All of our ingredients are sourced locally, so whenever you buy a treat or book a grooming visit with us, you are supporting at least <span class="font-bold text-terracotta">8 other local small businesses</span> right here in our area!
+          </p>
+
+          <!-- Highlights List -->
+          <div class="grid sm:grid-cols-2 gap-4 pt-2">
+            <div class="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-stone-200/80">
+              <div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fa-solid fa-check text-xs"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-cocoa">No Preservatives or Additives</h4>
+                <p class="text-xs text-stone-500">Pure rolled oats, peanut butter, pumpkin & honey.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-stone-200/80">
+              <div class="w-7 h-7 rounded-full bg-terracotta-light text-terracotta flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fa-solid fa-check text-xs"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-cocoa">Two Convenient Outlets</h4>
+                <p class="text-xs text-stone-500">Bakery retail at Brewhalla & full grooming salon on 56th St.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 flex items-center gap-6">
+            <div>
+              <span class="block font-serif-heading font-bold text-3xl text-terracotta">8+</span>
+              <span class="text-xs text-stone-500 uppercase tracking-wider font-semibold">Local Small Biz Supported</span>
+            </div>
+            <div class="h-10 w-px bg-stone-300"></div>
+            <div>
+              <span class="block font-serif-heading font-bold text-3xl text-cocoa">100%</span>
+              <span class="text-xs text-stone-500 uppercase tracking-wider font-semibold">Natural Ingredients</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Bakery Section (Products Showcase) -->
+  <section id="bakery" class="py-20 bg-white border-t border-stone-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+        <div class="badge-pill">
+          <i class="fa-solid fa-cookie-bite"></i>
+          <span>Fresh Bakery Goodies</span>
+        </div>
+        <h2 class="font-serif-heading text-3xl sm:text-4xl font-bold text-cocoa">
+          Kitchen-Crafted Bakery Treats
+        </h2>
+        <p class="text-stone-600 text-base sm:text-lg">
+          Baked fresh in small batches with wholesome local ingredients. Available at our retail shop inside <strong class="text-cocoa">Brewhalla (1702 1st Ave N)</strong>!
+        </p>
+
+        <!-- Filter Category Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 pt-4">
+          <button class="bakery-tab tab-active px-5 py-2 rounded-full text-sm font-semibold border border-stone-300 transition-all" data-category="all">
+            All Treats
+          </button>
+          <button class="bakery-tab px-5 py-2 rounded-full text-sm font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 border border-transparent transition-all" data-category="baked">
+            Fresh Baked Biscuits
+          </button>
+          <button class="bakery-tab px-5 py-2 rounded-full text-sm font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 border border-transparent transition-all" data-category="cakes">
+            Pupcakes & Cakes
+          </button>
+          <button class="bakery-tab px-5 py-2 rounded-full text-sm font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 border border-transparent transition-all" data-category="chews">
+            Dehydrated Chews
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Cards Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Product 1 -->
+        <div class="product-card custom-card rounded-3xl overflow-hidden flex flex-col justify-between" data-category="baked">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img src="assets/woofles.jpg" alt="Woofles" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+              <span class="absolute top-4 left-4 bg-terracotta text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Customer Favorite</span>
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-amber-700 uppercase tracking-wider bg-amber-50 px-2.5 py-1 rounded-md">Fresh Baked</span>
+                <span class="font-serif-heading font-bold text-lg text-cocoa">$9.50</span>
+              </div>
+              <h3 class="font-serif-heading font-bold text-xl text-cocoa">Woofles</h3>
+              <p class="text-stone-600 text-xs leading-relaxed">
+                Soft, savory, dog-safe biscuit bites made with wholesome ingredients for easy training rewards and happy tails.
+              </p>
+              <div class="pt-2 text-[11px] text-stone-500 font-medium">
+                <i class="fa-solid fa-wheat-awn text-amber-600 mr-1"></i> Ingredients: Oat flour, peanut butter, pumpkin, and simple bakery ingredients.
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="#locations" class="block w-full text-center bg-stone-100 hover:bg-terracotta hover:text-white text-cocoa text-xs font-semibold py-2.5 rounded-xl transition-colors">
+              Available at Brewhalla Retail
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card custom-card rounded-3xl overflow-hidden flex flex-col justify-between" data-category="cakes">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img src="assets/PBJ-Swiss-Roll.jpg" alt="PBJ Swiss Roll" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+              <span class="absolute top-4 left-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Custom Order</span>
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-purple-700 uppercase tracking-wider bg-purple-50 px-2.5 py-1 rounded-md">Celebration</span>
+                <span class="font-serif-heading font-bold text-lg text-cocoa">$18.00+</span>
+              </div>
+              <h3 class="font-serif-heading font-bold text-xl text-cocoa">PBJ Swiss Roll</h3>
+              <p class="text-stone-600 text-xs leading-relaxed">
+                A dog-safe, celebratory sweet treat with a soft bakery texture and a familiar peanut-butter-and-jam flavor profile.
+              </p>
+              <div class="pt-2 text-[11px] text-stone-500 font-medium">
+                <i class="fa-solid fa-wheat-awn text-amber-600 mr-1"></i> Ingredients: Wheat-based dough, natural peanut butter, fruit spread, and simple bakery ingredients.
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="#contact" class="open-contact-modal block w-full text-center bg-stone-100 hover:bg-terracotta hover:text-white text-cocoa text-xs font-semibold py-2.5 rounded-xl transition-colors" data-service="cake">
+              Inquire / Order Custom Cake
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card custom-card rounded-3xl overflow-hidden flex flex-col justify-between" data-category="baked">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img src="assets/honey carrot oat scones.jpg" alt="Honey Carrot Oat Scones" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-amber-700 uppercase tracking-wider bg-amber-50 px-2.5 py-1 rounded-md">Fresh Baked</span>
+                <span class="font-serif-heading font-bold text-lg text-cocoa">$10.00</span>
+              </div>
+              <h3 class="font-serif-heading font-bold text-xl text-cocoa">Honey Carrot Oat Scones</h3>
+              <p class="text-stone-600 text-xs leading-relaxed">
+                Naturally sweet and savory little scones made with oat flour, carrot, and a touch of honey for a wholesome bite.
+              </p>
+              <div class="pt-2 text-[11px] text-stone-500 font-medium">
+                <i class="fa-solid fa-wheat-awn text-amber-600 mr-1"></i> Ingredients: Oat flour, carrots, honey, and simple dog-safe bakery ingredients.
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="#locations" class="block w-full text-center bg-stone-100 hover:bg-terracotta hover:text-white text-cocoa text-xs font-semibold py-2.5 rounded-xl transition-colors">
+              Available at Brewhalla Retail
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card custom-card rounded-3xl overflow-hidden flex flex-col justify-between" data-category="chews">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img src="assets/furball.jpg" alt="Furball" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105 object-center" style="transform: scale(1.12); object-position: center center;" />
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-emerald-700 uppercase tracking-wider bg-emerald-50 px-2.5 py-1 rounded-md">Dehydrated</span>
+                <span class="font-serif-heading font-bold text-lg text-cocoa">$11.50</span>
+              </div>
+              <h3 class="font-serif-heading font-bold text-xl text-cocoa">Furball</h3>
+              <p class="text-stone-600 text-xs leading-relaxed">
+                A crunchy, satisfying biscuit-style treat made for long-lasting chew time and easy everyday rewards.
+              </p>
+              <div class="pt-2 text-[11px] text-stone-500 font-medium">
+                <i class="fa-solid fa-wheat-awn text-amber-600 mr-1"></i> Ingredients: Simple baked ingredients crafted for a rich, wholesome chew experience.
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="#locations" class="block w-full text-center bg-stone-100 hover:bg-terracotta hover:text-white text-cocoa text-xs font-semibold py-2.5 rounded-xl transition-colors">
+              Available at Brewhalla Retail
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Grooming & Interactive Pricing Calculator Section -->
+  <section id="grooming" class="py-20 bg-cream relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+        <div class="badge-pill">
+          <i class="fa-solid fa-scissors"></i>
+          <span>Grooming Salon & Spa</span>
+        </div>
+        <h2 class="font-serif-heading text-3xl sm:text-4xl font-bold text-cocoa">
+          Gentle Spa Grooming & Service Pricing
+        </h2>
+        <p class="text-stone-600 text-base sm:text-lg">
+          At our grooming salon on <strong class="text-cocoa">3895 56th Street</strong>, we provide personalized, stress-free grooming care tailored to your dog's size, breed, and coat type.
+        </p>
+      </div>
+
+      <!-- Interactive Pricing Estimator & Services Grid -->
+      <div class="grid lg:grid-cols-12 gap-8 items-start mb-16">
+        
+        <!-- Interactive Price Calculator Widget -->
+        <div class="lg:col-span-6 bg-white p-6 sm:p-8 rounded-3xl border border-stone-200 shadow-xl space-y-6">
+          <div class="flex items-center justify-between border-b border-stone-200 pb-4">
+            <div>
+              <span class="text-xs font-bold text-terracotta uppercase tracking-wider">Interactive Estimator</span>
+              <h3 class="font-serif-heading font-bold text-2xl text-cocoa">Grooming Price Calculator</h3>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-terracotta-light text-terracotta flex items-center justify-center text-lg">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+          </div>
+
+          <!-- Step 1: Pet Size -->
+          <div class="space-y-2">
+            <label for="calc-size" class="block text-xs font-bold text-cocoa uppercase tracking-wider">
+              1. Select Dog Size
+            </label>
+            <select id="calc-size" class="w-full bg-cream border border-stone-300 rounded-xl p-3 text-sm font-medium text-cocoa focus:ring-2 focus:ring-terracotta focus:outline-none">
+              <option value="small">Small Dog (&lt; 20 lbs) — e.g. Yorkie, Shih Tzu, Frenchie</option>
+              <option value="medium" selected>Medium Dog (20 - 50 lbs) — e.g. Corgi, Beagle, Aussie</option>
+              <option value="large">Large Dog (50 - 80 lbs) — e.g. Golden Retriever, Lab, Boxer</option>
+              <option value="xlarge">Extra Large (80+ lbs) — e.g. Bernese, Great Dane, Newfoundland</option>
+            </select>
+          </div>
+
+          <!-- Step 2: Coat Type -->
+          <div class="space-y-2">
+            <label for="calc-coat" class="block text-xs font-bold text-cocoa uppercase tracking-wider">
+              2. Coat Type / Breed Style
+            </label>
+            <select id="calc-coat" class="w-full bg-cream border border-stone-300 rounded-xl p-3 text-sm font-medium text-cocoa focus:ring-2 focus:ring-terracotta focus:outline-none">
+              <option value="short">Short Smooth Coat (e.g. Beagle, Boxer, Pitbull)</option>
+              <option value="medium" selected>Medium / Double Coat (e.g. Aussie, Golden, Husky)</option>
+              <option value="long">Long Silky Coat (e.g. Shih Tzu, Yorkie, Cocker)</option>
+              <option value="doodle">Doodle / Curly Haircut (e.g. Goldendoodle, Poodle, Pwd)</option>
+            </select>
+          </div>
+
+          <!-- Step 3: Base Package -->
+          <div class="space-y-2">
+            <label for="calc-service" class="block text-xs font-bold text-cocoa uppercase tracking-wider">
+              3. Service Package
+            </label>
+            <select id="calc-service" class="w-full bg-cream border border-stone-300 rounded-xl p-3 text-sm font-medium text-cocoa focus:ring-2 focus:ring-terracotta focus:outline-none">
+              <option value="full" selected>Full Haircut Spa (Bath, Haircut, Nail Trim, Ear Clean, Sani)</option>
+              <option value="bath">Bath & Brush Spa (Hydro-Bath, Blowout, Nails, Ear Clean)</option>
+              <option value="express">Express Bath & Trim (Quick Wash, Nail Trim & Paw Care)</option>
+            </select>
+          </div>
+
+          <!-- Step 4: Add-On Upgrades -->
+          <div class="space-y-3 pt-2">
+            <label class="block text-xs font-bold text-cocoa uppercase tracking-wider">
+              4. Optional Spa Upgrades
+            </label>
+
+            <div class="grid sm:grid-cols-2 gap-2 text-xs">
+              <label class="flex items-center gap-2 p-2.5 rounded-lg border border-stone-200 bg-cream/50 cursor-pointer hover:bg-stone-100">
+                <input type="checkbox" value="12" data-name="Teeth Brushing" class="addon-checkbox text-terracotta rounded focus:ring-terracotta" />
+                <span>Teeth Brushing (+$12)</span>
+              </label>
+
+              <label class="flex items-center gap-2 p-2.5 rounded-lg border border-stone-200 bg-cream/50 cursor-pointer hover:bg-stone-100">
+                <input type="checkbox" value="18" data-name="De-Shedding Treatment" class="addon-checkbox text-terracotta rounded focus:ring-terracotta" />
+                <span>De-Shedding Treatment (+$18)</span>
+              </label>
+
+              <label class="flex items-center gap-2 p-2.5 rounded-lg border border-stone-200 bg-cream/50 cursor-pointer hover:bg-stone-100">
+                <input type="checkbox" value="10" data-name="Blueberry Facial" class="addon-checkbox text-terracotta rounded focus:ring-terracotta" />
+                <span>Blueberry Facial (+$10)</span>
+              </label>
+
+              <label class="flex items-center gap-2 p-2.5 rounded-lg border border-stone-200 bg-cream/50 cursor-pointer hover:bg-stone-100">
+                <input type="checkbox" value="8" data-name="Paw Balm Soother" class="addon-checkbox text-terracotta rounded focus:ring-terracotta" />
+                <span>Paw Balm Soother (+$8)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Dynamic Output Card -->
+          <div class="p-5 rounded-2xl bg-amber-500/10 border border-amber-200 space-y-3">
+            <div class="flex items-center justify-between text-xs text-stone-600">
+              <span id="calc-size-label" class="font-semibold">Medium Dog (20 - 50 lbs)</span>
+              <span>Base Package: <strong id="calc-base-cost" class="text-cocoa font-bold">$75</strong></span>
+            </div>
+
+            <div class="flex items-center justify-between text-xs text-stone-600">
+              <span>Selected Add-ons: <strong id="calc-addons-cost" class="text-cocoa font-bold">$0</strong></span>
+            </div>
+
+            <div class="pt-2 border-t border-amber-200/80 flex items-center justify-between">
+              <div>
+                <span class="block text-xs uppercase font-bold text-stone-500">Estimated Grooming Total</span>
+                <span id="calc-total-cost" class="font-serif-heading text-3xl font-bold text-terracotta">$75</span>
+              </div>
+              <a href="#contact" class="open-contact-modal bg-terracotta hover:bg-terracotta-dark text-white px-5 py-2.5 rounded-full text-xs font-semibold transition-colors" data-service="grooming">
+                Inquire Appointment
+              </a>
+            </div>
+
+            <div id="calc-selected-addons" class="pt-1 flex flex-wrap gap-1">
+              <span class="text-stone-400 italic text-xs">No add-ons selected</span>
+            </div>
+            
+            <p class="text-[11px] text-stone-500 italic">
+              *Note: Final pricing depends on coat condition, matting, and pet behavior during intake.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Right Side Services List & Breakdown -->
+        <div class="lg:col-span-6 space-y-6">
+          
+          <div class="bg-white p-6 rounded-3xl border border-stone-200/80 shadow-sm space-y-4">
+            <h3 class="font-serif-heading font-bold text-2xl text-cocoa">Our Core Grooming Services</h3>
+            <p class="text-xs text-stone-500 leading-relaxed">
+              Every full service includes our warm hydro-massage bath, premium coat-specific shampoo, gentle ear cleaning, nail trim & file, and sanitary trim.
+            </p>
+
+            <div class="space-y-3 pt-2">
+              
+              <div class="p-3.5 rounded-2xl bg-cream border border-stone-200 flex items-start justify-between gap-4">
+                <div>
+                  <h4 class="font-serif-heading font-bold text-base text-cocoa">Full Haircut & Style Spa</h4>
+                  <p class="text-xs text-stone-600">Full breed-specific haircut or custom style, bath, blowout, nail trim, ear cleaning & sanitary trim.</p>
+                </div>
+                <span class="font-serif-heading font-bold text-terracotta text-sm whitespace-nowrap">$55 – $160</span>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-cream border border-stone-200 flex items-start justify-between gap-4">
+                <div>
+                  <h4 class="font-serif-heading font-bold text-base text-cocoa">Bath & Blowout Spa</h4>
+                  <p class="text-xs text-stone-600">Deep cleansing hydro-bath, fluff dry blowout, brush out, nail trim & ear cleaning. Perfect between cuts!</p>
+                </div>
+                <span class="font-serif-heading font-bold text-terracotta text-sm whitespace-nowrap">$35 – $110</span>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-cream border border-stone-200 flex items-start justify-between gap-4">
+                <div>
+                  <h4 class="font-serif-heading font-bold text-base text-cocoa">De-Shedding Treatment Package</h4>
+                  <p class="text-xs text-stone-600">Specialized anti-shed shampoo, high-velocity blowout & undercoat rake. Dramatically reduces loose hair at home!</p>
+                </div>
+                <span class="font-serif-heading font-bold text-terracotta text-sm whitespace-nowrap">+$18 – $30</span>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-cream border border-stone-200 flex items-start justify-between gap-4">
+                <div>
+                  <h4 class="font-serif-heading font-bold text-base text-cocoa">Nail Trim, Grind & Paw Care</h4>
+                  <p class="text-xs text-stone-600">Quick walk-in nail clip, smooth dremel filing, and nourishing paw butter application.</p>
+                </div>
+                <span class="font-serif-heading font-bold text-terracotta text-sm whitespace-nowrap">$15 – $22</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Grooming Policies Callout Card -->
+          <div class="p-6 rounded-3xl bg-terracotta-light border border-terracotta-border space-y-3">
+            <div class="flex items-center gap-2 text-terracotta font-serif-heading font-bold text-lg">
+              <i class="fa-solid fa-shield-dog"></i>
+              <span>Grooming Policies & Health Safety</span>
+            </div>
+            <ul class="text-xs text-stone-700 space-y-2 list-disc list-inside">
+              <li><strong class="text-cocoa">Vaccinations Required:</strong> All dogs must be up to date on Rabies, Distemper, and Bordetella for the safety of all pets.</li>
+              <li><strong class="text-cocoa">Stress-Free Handling:</strong> We take our time with anxious or senior dogs to ensure a calm, positive experience.</li>
+              <li><strong class="text-cocoa">Drop-off & Pick-up:</strong> Please arrive promptly for your scheduled appointment time.</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Grooming Transformations Before/After Gallery -->
+  <section id="transformations" class="py-20 bg-white border-t border-stone-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+        <div class="badge-pill">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <span>Grooming Gallery</span>
+        </div>
+        <h2 class="font-serif-heading text-3xl sm:text-4xl font-bold text-cocoa">
+          Grooming Transformations
+        </h2>
+        <p class="text-stone-600 text-base sm:text-lg">
+          Take a look at some of our fresh, happy salon graduates! From shaggy teddy bear cuts to de-shedding makeovers.
+        </p>
+
+        <!-- Gallery Filter Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 pt-4">
+          <button class="gallery-tab tab-active px-5 py-2 rounded-full text-sm font-semibold border border-stone-300 transition-all" data-tag="all">
+            All Transformations
+          </button>
+          <button class="gallery-tab px-5 py-2 rounded-full text-sm font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 border border-transparent transition-all" data-tag="doodle">
+            Doodles & Teddy Bear Cuts
+          </button>
+          <button class="gallery-tab px-5 py-2 rounded-full text-sm font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 border border-transparent transition-all" data-tag="deshed">
+            De-Shedding Makeovers
+          </button>
+          <button class="gallery-tab px-5 py-2 rounded-full text-sm font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 border border-transparent transition-all" data-tag="bath">
+            Bath & Blowouts
+          </button>
+        </div>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Transformation 1 -->
+        <div class="gallery-item custom-card rounded-3xl overflow-hidden p-4 space-y-3" data-tag="doodle">
+          <div class="relative rounded-2xl overflow-hidden">
+            <img src="assets/BA1.jpg" alt="Old English Sheepdog before and after grooming" class="w-full h-40 object-cover" />
+            <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">Before</span>
+            <span class="absolute bottom-2 right-2 bg-terracotta text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">After</span>
+          </div>
+          <div class="px-2">
+            <h4 class="font-serif-heading font-bold text-lg text-cocoa">Old English Sheepdog</h4>
+            <p class="text-xs text-stone-500">Full fluff restoration + paw butter spa</p>
+          </div>
+        </div>
+
+        <!-- Transformation 2 -->
+        <div class="gallery-item custom-card rounded-3xl overflow-hidden p-4 space-y-3" data-tag="bath">
+          <div class="relative rounded-2xl overflow-hidden">
+            <img src="assets/BA3.jpg" alt="Terrier mix before and after grooming" class="w-full h-40 object-cover" />
+            <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">Before</span>
+            <span class="absolute bottom-2 right-2 bg-terracotta text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">After</span>
+          </div>
+          <div class="px-2">
+            <h4 class="font-serif-heading font-bold text-lg text-cocoa">Terrier Mix</h4>
+            <p class="text-xs text-stone-500">Hydro-bath spa, brush-out & finishing trim</p>
+          </div>
+        </div>
+
+        <!-- Transformation 3 -->
+        <div class="gallery-item custom-card rounded-3xl overflow-hidden p-4 space-y-3" data-tag="bath">
+          <div class="relative rounded-2xl overflow-hidden">
+            <img src="assets/BA2.jpg" alt="Shih Tzu before and after grooming" class="w-full h-40 object-cover" />
+            <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">Before</span>
+            <span class="absolute bottom-2 right-2 bg-terracotta text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">After</span>
+          </div>
+          <div class="px-2">
+            <h4 class="font-serif-heading font-bold text-lg text-cocoa">Shih Tzu</h4>
+            <p class="text-xs text-stone-500">De-shedding & shine treatment</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Store Locations & Hours Section -->
+  <section id="locations" class="py-20 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+        <div class="badge-pill">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Visit Us</span>
+        </div>
+        <h2 class="font-serif-heading text-3xl sm:text-4xl font-bold text-cocoa">
+          Our Retail Boutique & Grooming Salon
+        </h2>
+        <p class="text-stone-600 text-base sm:text-lg">
+          We operate two specialized outlets in Fargo-Moorhead to serve all your pet bakery and grooming needs!
+        </p>
+      </div>
+
+      <!-- Location Cards Grid -->
+      <div class="grid md:grid-cols-2 gap-8">
+        
+        <!-- Location 1: Retail Boutique -->
+        <div class="bg-white rounded-3xl border border-stone-200 p-8 shadow-xl space-y-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-store"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-amber-800 uppercase tracking-wider bg-amber-50 px-2.5 py-0.5 rounded">Bakery & Retail Outlet</span>
+                <h3 class="font-serif-heading font-bold text-2xl text-cocoa">Brewhalla Retail Boutique</h3>
+              </div>
+            </div>
+
+            <p class="text-stone-600 text-sm leading-relaxed">
+              Stop by our bakery counter inside the bustling Brewhalla market to pick up fresh kitchen-baked biscuits, celebration pupcakes, dehydrated chews, and cute pet accessories!
+            </p>
+
+            <div class="space-y-2.5 text-xs text-cocoa pt-2">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-map-pin text-terracotta text-sm w-4"></i>
+                <span class="font-semibold">1702 1st Ave N, Fargo, ND (At Brewhalla)</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-envelope text-terracotta text-sm w-4"></i>
+                <span>barknbiscuitsbakery@gmail.com</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-clock text-terracotta text-sm w-4 mt-0.5"></i>
+                <div>
+                  <span class="font-semibold block">Store Hours:</span>
+                  <span class="text-stone-500">Mon - Sat: 10:00 AM – 7:00 PM</span><br/>
+                  <span class="text-stone-500">Sun: 11:00 AM – 5:00 PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-stone-100 flex flex-wrap gap-3">
+            <a href="https://maps.google.com/?q=1702+1st+Ave+N+Fargo+ND" target="_blank" rel="noopener noreferrer" class="bg-cocoa hover:bg-stone-800 text-white px-5 py-2.5 rounded-xl text-xs font-semibold inline-flex items-center gap-2 transition-colors">
+              <i class="fa-solid fa-directions"></i>
+              <span>Get Directions to Brewhalla</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Location 2: Grooming Salon -->
+        <div class="bg-white rounded-3xl border border-stone-200 p-8 shadow-xl space-y-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-2xl bg-terracotta-light text-terracotta flex items-center justify-center text-xl">
+                <i class="fa-solid fa-scissors"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-terracotta uppercase tracking-wider bg-terracotta-light px-2.5 py-0.5 rounded">Grooming Salon & Spa</span>
+                <h3 class="font-serif-heading font-bold text-2xl text-cocoa">56th Street Grooming Salon</h3>
+              </div>
+            </div>
+
+            <p class="text-stone-600 text-sm leading-relaxed">
+              Our full-service grooming salon where your pet receives gentle, individual coat styling, baths, nail trims, and spa upgrades in a clean, welcoming environment.
+            </p>
+
+            <div class="space-y-2.5 text-xs text-cocoa pt-2">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-map-pin text-terracotta text-sm w-4"></i>
+                <span class="font-semibold">3895 56th Street, Fargo, ND</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-envelope text-terracotta text-sm w-4"></i>
+                <span>barknbiscuitsbakery@gmail.com</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-clock text-terracotta text-sm w-4 mt-0.5"></i>
+                <div>
+                  <span class="font-semibold block">Salon Hours:</span>
+                  <span class="text-stone-500">Tue - Sat: 8:00 AM – 5:00 PM</span><br/>
+                  <span class="text-stone-500">Sun & Mon: Closed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-stone-100 flex flex-wrap gap-3">
+            <a href="https://maps.google.com/?q=3895+56th+Street+Fargo+ND" target="_blank" rel="noopener noreferrer" class="bg-terracotta hover:bg-terracotta-dark text-white px-5 py-2.5 rounded-xl text-xs font-semibold inline-flex items-center gap-2 transition-colors">
+              <i class="fa-solid fa-directions"></i>
+              <span>Get Directions to Salon</span>
+            </a>
+            <a href="#contact" class="open-contact-modal border border-stone-300 hover:bg-stone-100 text-cocoa px-5 py-2.5 rounded-xl text-xs font-semibold inline-flex items-center gap-2 transition-colors" data-service="grooming">
+              Inquire Appointment
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-20 bg-white border-t border-stone-200/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center space-y-4">
+        <div class="badge-pill">
+          <i class="fa-solid fa-circle-question"></i>
+          <span>Got Questions?</span>
+        </div>
+        <h2 class="font-serif-heading text-3xl sm:text-4xl font-bold text-cocoa">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-stone-600 text-sm sm:text-base">
+          Everything you need to know about our bakery ingredients, grooming policies, and store visits.
+        </p>
+      </div>
+
+      <!-- Accordion List -->
+      <div class="space-y-4">
+        
+        <div class="accordion-item bg-cream border border-stone-200 rounded-2xl overflow-hidden">
+          <button class="accordion-header w-full p-5 text-left font-serif-heading font-bold text-base sm:text-lg text-cocoa flex items-center justify-between gap-4 focus:outline-none">
+            <span>What ingredients do you use in your dog bakery treats?</span>
+            <i class="fa-solid fa-chevron-down accordion-icon text-terracotta text-sm transition-transform"></i>
+          </button>
+          <div class="accordion-content px-5 pb-5 text-xs sm:text-sm text-stone-600 leading-relaxed border-t border-stone-200/60 pt-3">
+            All of our treat recipes are created in our own kitchen using 100% natural, wholesome ingredients you'd find at your local grocery store (like rolled oats, organic pumpkin, natural peanut butter, local honey, and free-range eggs). We never use artificial preservatives, dyes, or fillers!
+          </div>
+        </div>
+
+        <div class="accordion-item bg-cream border border-stone-200 rounded-2xl overflow-hidden">
+          <button class="accordion-header w-full p-5 text-left font-serif-heading font-bold text-base sm:text-lg text-cocoa flex items-center justify-between gap-4 focus:outline-none">
+            <span>How does buying from Bark 'n' Biscuit support local small businesses?</span>
+            <i class="fa-solid fa-chevron-down accordion-icon text-terracotta text-sm transition-transform"></i>
+          </button>
+          <div class="accordion-content px-5 pb-5 text-xs sm:text-sm text-stone-600 leading-relaxed border-t border-stone-200/60 pt-3">
+            We source all of our raw ingredients locally—from oat millers and egg producers to honey farms and meat suppliers. Every single batch of treats or grooming service you purchase directly supports at least 8 other local small businesses in our community!
+          </div>
+        </div>
+
+        <div class="accordion-item bg-cream border border-stone-200 rounded-2xl overflow-hidden">
+          <button class="accordion-header w-full p-5 text-left font-serif-heading font-bold text-base sm:text-lg text-cocoa flex items-center justify-between gap-4 focus:outline-none">
+            <span>Where can I purchase bakery treats or order a custom birthday pupcake?</span>
+            <i class="fa-solid fa-chevron-down accordion-icon text-terracotta text-sm transition-transform"></i>
+          </button>
+          <div class="accordion-content px-5 pb-5 text-xs sm:text-sm text-stone-600 leading-relaxed border-t border-stone-200/60 pt-3">
+            You can visit our retail counter inside Brewhalla (1702 1st Ave N) to pick up fresh baked biscuits and chews anytime! For custom birthday cakes or pupcake party orders, send us a message through our inquiry form or email us at barknbiscuitsbakery@gmail.com!
+          </div>
+        </div>
+
+        <div class="accordion-item bg-cream border border-stone-200 rounded-2xl overflow-hidden">
+          <button class="accordion-header w-full p-5 text-left font-serif-heading font-bold text-base sm:text-lg text-cocoa flex items-center justify-between gap-4 focus:outline-none">
+            <span>What vaccinations are required for grooming at 56th Street?</span>
+            <i class="fa-solid fa-chevron-down accordion-icon text-terracotta text-sm transition-transform"></i>
+          </button>
+          <div class="accordion-content px-5 pb-5 text-xs sm:text-sm text-stone-600 leading-relaxed border-t border-stone-200/60 pt-3">
+            To ensure the health and safety of all our furry guests, we require up-to-date Rabies, Distemper (DHPP), and Bordetella vaccinations prior to your dog's grooming appointment.
+          </div>
+        </div>
+
+        <div class="accordion-item bg-cream border border-stone-200 rounded-2xl overflow-hidden">
+          <button class="accordion-header w-full p-5 text-left font-serif-heading font-bold text-base sm:text-lg text-cocoa flex items-center justify-between gap-4 focus:outline-none">
+            <span>How are grooming prices determined?</span>
+            <i class="fa-solid fa-chevron-down accordion-icon text-terracotta text-sm transition-transform"></i>
+          </button>
+          <div class="accordion-content px-5 pb-5 text-xs sm:text-sm text-stone-600 leading-relaxed border-t border-stone-200/60 pt-3">
+            Grooming prices are based on your pet's weight, coat type, length, and coat condition (e.g. matting or heavy undercoat). You can use our interactive Grooming Price Calculator above for a fast estimate!
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact / Inquiry Section -->
+  <section id="contact" class="py-20 bg-cream">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-white rounded-3xl border border-stone-200 p-8 sm:p-12 shadow-2xl space-y-8">
+        <div class="text-center space-y-3 max-w-2xl mx-auto">
+          <div class="badge-pill">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Get in Touch</span>
+          </div>
+          <h2 class="font-serif-heading text-3xl sm:text-4xl font-bold text-cocoa">
+            Have a Question or Want to Inquire About Grooming?
+          </h2>
+          <p class="text-stone-600 text-sm">
+            Fill out the form below for grooming availability, bakery questions, or custom birthday cake orders. We'll respond as soon as we wash our hands from the flour and dog soap!
+          </p>
+        </div>
+
+        <form id="inquiry-form" class="space-y-6">
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="block text-xs font-bold text-cocoa uppercase tracking-wider">Your Name *</label>
+              <input type="text" required placeholder="e.g. Sarah Johnson" class="w-full bg-cream border border-stone-300 rounded-xl p-3 text-sm text-cocoa focus:ring-2 focus:ring-terracotta focus:outline-none" />
+            </div>
+
+            <div class="space-y-2">
+              <label class="block text-xs font-bold text-cocoa uppercase tracking-wider">Email Address *</label>
+              <input type="email" required placeholder="sarah@example.com" class="w-full bg-cream border border-stone-300 rounded-xl p-3 text-sm text-cocoa focus:ring-2 focus:ring-terracotta focus:outline-none" />
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="block text-xs font-bold text-cocoa uppercase tracking-wider">Dog's Name & Breed</label>
+              <input type="text" placeholder="e.g. Charlie (Golden Retriever)" class="w-full bg-cream border border-stone-300 rounded-xl p-3 text-sm text-cocoa focus:ring-2 focus:ring-terracotta focus:outline-none" />
+            </div>
+
+            <div class="space-y-2">
+              <label class="block text-xs font-bold text-cocoa uppercase tracking-wider">Topic / Interest *</label>
+              <select id="inquiry-service" class="w-full bg-cream border border-stone-300 rounded-xl p-3 text-sm text-cocoa focus:ring-2 focus:ring-terracotta focus:outline-none">
+                <option value="grooming">Grooming Appointment Inquiry (3895 56th St)</option>
+                <option value="cake">Custom Birthday Cake / Pupcakes Order</option>
+                <option value="bakery">Bakery Treats & Wholesale Info</option>
+                <option value="general">General Question</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <label class="block text-xs font-bold text-cocoa uppercase tracking-wider">Your Message *</label>
+            <textarea rows="4" required placeholder="Tell us how we can help you and your furry friend..." class="w-full bg-cream border border-stone-300 rounded-xl p-3 text-sm text-cocoa focus:ring-2 focus:ring-terracotta focus:outline-none"></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-terracotta hover:bg-terracotta-dark text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all text-sm uppercase tracking-wider">
+            Send Message to Bark 'n' Biscuit
+          </button>
+        </form>
+
+        <div id="form-success-msg" class="hidden text-center py-8 space-y-3">
+          <div class="w-16 h-16 mx-auto bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-2xl">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <h3 class="font-serif-heading font-bold text-2xl text-cocoa">Thank You!</h3>
+          <p class="text-stone-600 text-sm max-w-md mx-auto">
+            Your message has been sent to Stace and the Bark 'n' Biscuit team. We'll get back to you shortly!
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Popup Contact Modal -->
+  <div id="contact-modal" class="fixed inset-0 z-50 bg-cocoa/60 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative space-y-4">
+      <button id="close-modal-btn" class="absolute top-4 right-4 p-2 text-stone-400 hover:text-cocoa">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+
+      <div class="space-y-1">
+        <span class="text-xs font-bold text-terracotta uppercase tracking-wider">Direct Message</span>
+        <h3 class="font-serif-heading font-bold text-2xl text-cocoa">Inquire with Stace</h3>
+        <p class="text-xs text-stone-500">Reach out directly for grooming schedules or bakery orders.</p>
+      </div>
+
+      <div class="p-4 rounded-xl bg-cream border border-stone-200 text-xs text-cocoa space-y-2">
+        <div><strong>Email:</strong> barknbiscuitsbakery@gmail.com</div>
+        <div><strong>Socials:</strong> @barknbiscuitsco (Instagram & Facebook)</div>
+        <div><strong>Locations:</strong> Brewhalla Retail & 56th St Grooming Salon</div>
+      </div>
+
+      <a href="mailto:barknbiscuitsbakery@gmail.com" class="block w-full text-center bg-terracotta hover:bg-terracotta-dark text-white font-bold py-3 rounded-xl text-xs uppercase tracking-wider">
+        Email barknbiscuitsbakery@gmail.com
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-cocoa text-stone-300 py-16 border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="grid md:grid-cols-12 gap-8 items-start">
+        
+        <!-- Brand Column -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="assets/logo.png" alt="Bark 'n' Biscuit Logo" class="h-12 w-auto bg-white p-1 rounded-xl" />
+            <div>
+              <span class="block font-serif-heading font-bold text-xl text-white">Bark 'n' Biscuit</span>
+              <span class="block text-xs text-terracotta font-semibold uppercase">Grooming & Bakery</span>
+            </div>
+          </div>
+          <p class="text-xs text-stone-400 leading-relaxed max-w-sm">
+            Locally owned dog bakery and grooming salon. Kitchen-crafted recipes with all-natural grocery store ingredients, supporting 8+ local small businesses in our community.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://www.instagram.com/barknbiscuitsfargo/" target="_blank" rel="noopener noreferrer" aria-label="Bark 'n' Biscuit Instagram" class="w-9 h-9 rounded-full bg-stone-800 hover:bg-terracotta text-white flex items-center justify-center transition-colors">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://facebook.com/barknbiscuitsco" target="_blank" rel="noopener noreferrer" aria-label="Bark 'n' Biscuit Facebook" class="w-9 h-9 rounded-full bg-stone-800 hover:bg-terracotta text-white flex items-center justify-center transition-colors">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="mailto:barknbiscuitsbakery@gmail.com" aria-label="Bark 'n' Biscuit Email" class="w-9 h-9 rounded-full bg-stone-800 hover:bg-terracotta text-white flex items-center justify-center transition-colors">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="font-serif-heading font-bold text-white text-sm">Quick Navigation</h4>
+          <ul class="space-y-2 text-xs text-stone-400">
+            <li><a href="#about" class="hover:text-amber-300 transition-colors">Our Story & Kitchen</a></li>
+            <li><a href="#bakery" class="hover:text-amber-300 transition-colors">Homemade Bakery Treats</a></li>
+            <li><a href="#grooming" class="hover:text-amber-300 transition-colors">Grooming Rates & Calculator</a></li>
+            <li><a href="#transformations" class="hover:text-amber-300 transition-colors">Grooming Transformations</a></li>
+            <li><a href="#locations" class="hover:text-amber-300 transition-colors">Store Locations & Hours</a></li>
+            <li><a href="#faq" class="hover:text-amber-300 transition-colors">Frequently Asked Questions</a></li>
+          </ul>
+        </div>
+
+        <!-- Locations Column -->
+        <div class="md:col-span-4 space-y-3 text-xs">
+          <h4 class="font-serif-heading font-bold text-white text-sm">Outlets & Domain</h4>
+          <div class="space-y-2 text-stone-400">
+            <div>
+              <span class="block text-white font-semibold">Retail Boutique:</span>
+              1702 1st Ave N (Inside Brewhalla)
+            </div>
+            <div>
+              <span class="block text-white font-semibold">Grooming Salon:</span>
+              3895 56th Street
+            </div>
+            <div>
+              <span class="block text-white font-semibold">Domain:</span>
+              <a href="http://barknbiscuits.com" target="_blank" class="text-terracotta hover:underline">barknbiscuits.com</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
+        <div>
+          &copy; 2026 Bark 'n' Biscuit Bakery & Grooming. All rights reserved.
+        </div>
+        <div>
+          Website demo built by <a href="https://mooreai.net" target="_blank" class="text-stone-300 hover:text-white font-semibold underline">MooreAI</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>

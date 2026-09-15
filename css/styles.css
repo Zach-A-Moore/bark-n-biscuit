@@ -1,0 +1,189 @@
+/* Bark 'n' Biscuit - Minimalist Editorial Styles */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --bg-main: #111315;
+  --bg-card: #1B1F22;
+  --bg-card-soft: #21272B;
+  --text-dark: #F3EFE8;
+  --text-muted: #C9C1B5;
+  --border-color: #2D3338;
+  --border-dark: #E8E1D9;
+  
+  --accent: #D77A4A;
+  --accent-hover: #B86138;
+  --accent-light: rgba(215, 122, 74, 0.14);
+  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+body {
+  font-family: var(--font-sans);
+  background:
+    radial-gradient(circle at top, rgba(215, 122, 74, 0.08), transparent 28%),
+    var(--bg-main);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: #D6D3D1;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Solid Navigation Bar */
+header {
+  background-color: rgba(17, 19, 21, 0.96) !important;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.glass-nav {
+  background-color: rgba(17, 19, 21, 0.96) !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Sharp Card & Border Utility */
+.border-sharp {
+  border: 1px solid var(--border-color);
+}
+
+.card-editorial,
+.custom-card,
+.bg-white,
+.bg-cream {
+  background: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+  box-shadow: var(--shadow-soft);
+}
+
+.card-editorial:hover,
+.custom-card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.text-cocoa,
+.text-stone-500,
+.text-stone-600,
+.text-stone-400,
+.text-stone-300,
+.text-stone-200,
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.text-cocoa {
+  color: var(--text-dark) !important;
+}
+
+.bg-stone-100,
+.bg-stone-50 {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+.bg-stone-800 {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.bg-cream {
+  background-color: #1a1d20 !important;
+}
+
+.badge-pill,
+.tab-btn.tab-active,
+.accent-button,
+button,
+.a,
+.text-terracotta {
+  box-shadow: 0 10px 25px rgba(215, 122, 74, 0.12);
+}
+
+/* Custom Filter Buttons */
+.tab-btn {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  transition: all 0.15s ease;
+}
+
+.tab-btn:hover {
+  border-color: var(--text-dark);
+  color: var(--text-dark);
+}
+
+.tab-btn.tab-active {
+  background: var(--text-dark);
+  color: #FFFFFF;
+  border-color: var(--text-dark);
+}
+
+/* Accordion */
+.accordion-item {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0, 1, 0, 1), opacity 0.2s ease;
+  opacity: 0;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 400px;
+  opacity: 1;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg);
+}
+
+/* Form Elements */
+input, select, textarea {
+  border-radius: 4px !important;
+  border: 1px solid var(--border-color) !important;
+  background-color: #FFFFFF !important;
+  transition: border-color 0.15s ease !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none !important;
+  border-color: var(--text-dark) !important;
+  box-shadow: 0 0 0 1px var(--text-dark) !important;
+}
+
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--dark) transparent transparent transparent;
+}
