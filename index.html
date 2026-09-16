@@ -124,9 +124,8 @@
         <!-- Left Content -->
         <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
           
-          <div class="inline-flex items-center gap-2 bg-terracotta-light border border-terracotta-border text-terracotta px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider">
-            <i class="fa-solid fa-heart text-terracotta"></i>
-            <span>Locally Owned • Kitchen Crafted • 8+ Local Suppliers</span>
+          <div class="inline-flex items-center bg-[#f4eeea] border border-[#e8d8ca] text-[#4e433c] px-4 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold uppercase tracking-[0.14em]">
+            <span>Fargo's dog bakery & grooming salon</span>
           </div>
 
           <h1 class="font-serif-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-cocoa leading-[1.15]">
@@ -138,41 +137,29 @@
           </p>
 
           <!-- Quick Action Buttons -->
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-            <a href="#bakery" class="bg-terracotta hover:bg-terracotta-dark text-white px-7 py-3.5 rounded-full font-semibold text-base transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 inline-flex items-center gap-2">
-              <i class="fa-solid fa-cookie-bite"></i>
-              <span>Explore Bakery Treats</span>
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+            <a href="#bakery" class="bg-terracotta hover:bg-terracotta-dark text-white px-6 py-3 rounded-full font-semibold text-sm transition-all shadow-md hover:shadow-lg inline-flex items-center gap-2">
+              <span>Shop treats</span>
             </a>
 
-            <a href="#grooming" class="bg-white hover:bg-stone-50 text-cocoa border border-stone-300 px-7 py-3.5 rounded-full font-semibold text-base transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 inline-flex items-center gap-2">
-              <i class="fa-solid fa-calculator text-terracotta"></i>
-              <span>Calculate Grooming Price</span>
+            <a href="#grooming" class="border border-stone-300 bg-white/5 text-cocoa px-6 py-3 rounded-full font-semibold text-sm transition-all hover:border-stone-200 hover:bg-white/10 inline-flex items-center gap-2">
+              <span>Get pricing</span>
             </a>
           </div>
 
-          <!-- Quick Location Pill Cards -->
-          <div class="pt-6 grid sm:grid-cols-2 gap-4 max-w-xl mx-auto lg:mx-0">
-            <a href="#locations" class="p-3.5 rounded-2xl bg-[#dfe0df]/90 backdrop-blur border border-[#f2f4f3]/40 flex items-center gap-3.5 hover:border-terracotta/50 transition-colors shadow-[0_10px_30px_rgba(0,0,0,0.18)] text-left group">
-              <div class="w-10 h-10 rounded-xl bg-[#d7a06e] text-[#2a241f] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
-                <i class="fa-solid fa-store text-lg"></i>
-              </div>
-              <div>
-                <span class="block text-[10px] font-bold text-[#3a3a39] uppercase tracking-[0.14em]">Retail Store</span>
-                <span class="block font-bold text-sm text-[#191716] group-hover:text-terracotta transition-colors">Inside Brewhalla</span>
-                <span class="block text-xs text-[#4b4742]">1702 1st Ave N</span>
-              </div>
-            </a>
+          <!-- Quick Location Details -->
+          <div class="pt-6 grid sm:grid-cols-2 gap-3 max-w-xl mx-auto lg:mx-0">
+            <div class="rounded-2xl border border-stone-200/80 bg-white/[0.04] p-3.5 text-left">
+              <span class="block text-[10px] font-bold text-stone-400 uppercase tracking-[0.14em]">Retail Store</span>
+              <p class="mt-1 font-semibold text-sm text-cocoa">Inside Brewhalla</p>
+              <p class="text-xs text-stone-500">1702 1st Ave N</p>
+            </div>
 
-            <a href="#locations" class="p-3.5 rounded-2xl bg-[#dfe0df]/90 backdrop-blur border border-[#f2f4f3]/40 flex items-center gap-3.5 hover:border-terracotta/50 transition-colors shadow-[0_10px_30px_rgba(0,0,0,0.18)] text-left group">
-              <div class="w-10 h-10 rounded-xl bg-[#d7a06e] text-[#2a241f] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
-                <i class="fa-solid fa-scissors text-lg"></i>
-              </div>
-              <div>
-                <span class="block text-[10px] font-bold text-[#3a3a39] uppercase tracking-[0.14em]">Grooming Salon</span>
-                <span class="block font-bold text-sm text-[#191716] group-hover:text-terracotta transition-colors">56th Street Salon</span>
-                <span class="block text-xs text-[#4b4742]">3895 56th Street</span>
-              </div>
-            </a>
+            <div class="rounded-2xl border border-stone-200/80 bg-white/[0.04] p-3.5 text-left">
+              <span class="block text-[10px] font-bold text-stone-400 uppercase tracking-[0.14em]">Grooming Salon</span>
+              <p class="mt-1 font-semibold text-sm text-cocoa">56th Street Salon</p>
+              <p class="text-xs text-stone-500">3895 56th Street</p>
+            </div>
           </div>
 
         </div>
@@ -197,31 +184,7 @@
               </div>
             </div>
 
-            <!-- Floating Badge Card 1 -->
-            <div class="absolute -top-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-stone-100 flex items-center gap-3 animate-float hidden sm:flex">
-              <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
-                <i class="fa-solid fa-leaf text-xl"></i>
-              </div>
-              <div>
-                <span class="block text-xs text-stone-400 font-semibold uppercase">100% Natural</span>
-                <span class="block font-serif-heading font-bold text-cocoa text-sm">Grocery Ingredients</span>
-              </div>
-            </div>
-
-            <!-- Floating Badge Card 2 -->
-            <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl p-4 shadow-xl border border-stone-100 flex items-center gap-3 hidden sm:flex">
-              <div class="w-12 h-12 rounded-xl bg-terracotta-light text-terracotta flex items-center justify-center">
-                <i class="fa-solid fa-hand-holding-heart text-xl"></i>
-              </div>
-              <div>
-                <span class="block text-xs text-stone-400 font-semibold uppercase">Supporting Local</span>
-                <span class="block font-serif-heading font-bold text-cocoa text-sm">8+ Small Businesses</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
+            <!-- Floating detail cards -->
       </div>
     </div>
   </section>
@@ -283,7 +246,7 @@
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
               <p class="text-xs text-cocoa font-medium italic">"My dog goes crazy for their peanut butter bites! Plus I love knowing everything is all-natural and locally made."</p>
-              <span class="block text-[11px] text-stone-400 font-bold uppercase">— Local Fargo Pet Parent</span>
+              <span class="block text-[11px] text-stone-400 font-bold uppercase">— sample Review</span>
             </div>
           </div>
         </div>
@@ -315,7 +278,7 @@
               </div>
               <div>
                 <h4 class="font-bold text-sm text-cocoa">No Preservatives or Additives</h4>
-                <p class="text-xs text-stone-500">Pure rolled oats, peanut butter, pumpkin & honey.</p>
+                <p class="text-xs text-stone-500">Oats, peanut butter, pumpkin & honey.</p>
               </div>
             </div>
 

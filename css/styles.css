@@ -86,14 +86,14 @@ body {
 
 /* Solid Navigation Bar */
 header {
-  background-color: rgba(17, 19, 21, 0.96) !important;
-  border-bottom: 1px solid var(--border-color);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  background-color: rgba(17, 19, 21, 0.9) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.18);
 }
 
 .glass-nav {
-  background-color: rgba(17, 19, 21, 0.96) !important;
-  border-bottom: 1px solid var(--border-color);
+  background-color: rgba(17, 19, 21, 0.9) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Sharp Card & Border Utility */
@@ -105,9 +105,9 @@ header {
 .custom-card,
 .bg-white,
 .bg-cream {
-  background: var(--bg-card) !important;
-  border-color: var(--border-color) !important;
-  box-shadow: var(--shadow-soft);
+  background: rgba(27, 31, 34, 0.92) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
 }
 
 .card-editorial:hover,
@@ -148,7 +148,15 @@ header {
 button,
 .a,
 .text-terracotta {
-  box-shadow: 0 10px 25px rgba(215, 122, 74, 0.12);
+  box-shadow: 0 8px 18px rgba(215, 122, 74, 0.08);
+}
+
+.badge-pill {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-dark);
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
 }
 
 .bg-terracotta {
